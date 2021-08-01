@@ -1,6 +1,7 @@
 //importancion
 import React from 'react'
 import Result from './components/Result'
+import Button from './components/Button'
 import './App.css'
 
 //Funcion flecha
@@ -11,33 +12,29 @@ const App = () => {
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={0} />
+        <Result value={undefined} />
         <div className="numbers">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>0</button>
+            <Button text="1" />
+            <Button text="2" />
+            <Button text="3" />
+            <Button text="4" />
+            <Button text="5" />
+            <Button text="6" />
+            <Button text="7" />
+            <Button text="8" />
+            <Button text="9" />
+            <Button text="0" />
         </div>
         <div className="functions">
-            <button>
-                clear
-            </button>
-            <button>
-                r
-            </button>
+        <Button text="Clear" />
+        <Button text="R" />
         </div>
         <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
+        <Button text="+" />
+        <Button text="-" />
+        <Button text="*" />
+        <Button text="/" />
+        <Button text="=" />
         </div>
     </main>)
 }
