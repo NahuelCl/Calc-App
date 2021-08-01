@@ -1,6 +1,7 @@
 //importancion
 import React from 'react'
 import Button from './components/Button'
+import Functions from './components/Functions'
 import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 
@@ -33,10 +34,13 @@ const App = () => {
             <Button text="9" clickHandler = {clickHandlerFunction}/>
             <Button text="0" clickHandler = {clickHandlerFunction}/>
         </div>
-        <div className="functions">
-        <Button text="Clear" clickHandler = {clickHandlerFunction} />
-        <Button text="R" clickHandler = {clickHandlerFunction}/>
-        </div>
+        <Functions
+            onContentClear = {clear =>
+            console.log("Content Clear", clear)}
+
+            onDelete = {() => 
+            console.log("OnDelete" )}
+        />
         <MathOperations 
             onClickOperation= {operation => 
                 console.log ("operacion:", operation)
