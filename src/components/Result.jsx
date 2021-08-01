@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Result = ({value}) => {
     return (
@@ -6,6 +7,10 @@ const Result = ({value}) => {
             {value}
         </div>
     )
+}
+
+Result.propTypes = {
+    value : PropTypes.string.isRequired
 }
 
 export default Result
