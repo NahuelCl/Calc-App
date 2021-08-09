@@ -18,10 +18,7 @@ const App = () => {
     
     const items = words(stack, /[^-^+^*^/]+/g)
 
-    console.log(items)
-
             // Lo que ejecuta la función
-    console.log("Renderización de App")
     return (
     <main className='react-calculator'>
         <Result value={items[items.length-1]} />
@@ -32,12 +29,11 @@ const App = () => {
         }} />
         <Functions
             onContentClear = { () => {
-            console.log("Content Clear")
+
             setStack("")}}
 
             onDelete = {() => {
             if(stack.length > 0){
-                console.log("OnDelete" )
                 const newStack = stack.substring(0, stack.length-1)
                 setStack(newStack)
             }
@@ -46,11 +42,9 @@ const App = () => {
         />
         <MathOperations 
             onClickOperation= {operation => {
-                console.log ("operacion:", operation)
                 setStack(`${stack}${operation}`) 
                 }}
             onClickEqual = {equal =>{
-            console.log("Equal:", equal)
             setStack(eval(stack).toString()) 
             }}
         />
